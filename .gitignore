@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+myenv/
+
+# Notebook / editor
+.ipynb_checkpoints/
+.vscode/
+
+# Logs / temp files
+*.log
+*.tmp
+*.bak
+
+# LaTeX build outputs
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db

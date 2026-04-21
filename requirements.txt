@@ -1,0 +1,20 @@
+# ESG-CAPM Thesis — Python Dependencies
+# Install all with: pip install -r requirements.txt
+
+yfinance>=0.2.36        # Yahoo Finance data (returns + ESG sustainability)
+pandas>=2.0.0           # DataFrame operations and panel wrangling
+numpy>=1.24.0           # Numerical operations (beta computation, winsorizing)
+pandas_datareader>=0.10 # Fama-French factor download from Ken French's library
+requests>=2.31.0        # HTTP requests (Wikipedia scraping)
+beautifulsoup4>=4.12.0  # HTML parsing (used implicitly by pandas.read_html)
+lxml>=4.9.0             # Faster HTML parser backend for pandas.read_html
+tqdm>=4.65.0            # Progress bars for long loops
+
+# --- Analysis stage (not needed for data collection, but install now) ---
+statsmodels>=0.14.0     # OLS, time-series tests (ADF, Breusch-Pagan)
+linearmodels>=5.3        # Panel OLS with fixed effects + clustered SEs
+pykalman>=0.9.7         # Kalman filter for time-varying beta (Stage 3)
+arch>=6.3.0             # GARCH models for volatility (robustness check)
+scipy>=1.11.0           # Statistical tests (F-test, heteroskedasticity)
+matplotlib>=3.7.0       # Plotting
+seaborn>=0.12.0         # Statistical visualization
