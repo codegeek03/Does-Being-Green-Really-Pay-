@@ -1,0 +1,33 @@
+%========================================================
+% CHAPTER 1: INTRODUCTION
+%========================================================
+\chapter{Introduction}
+\label{chap:introduction}
+
+\section{Motivation}
+
+The dominant question in ESG investing has long been whether being sustainable pays. Decades of empirical work have tried to establish whether firms with high ESG scores earn superior risk-adjusted returns --- the so-called ``greenium'' --- yet the evidence remains decidedly mixed \citep{friede2015esg, berg2022aggregate}. This thesis argues that the question itself is misconceived. The relevant question is not whether being green pays, but whether \emph{becoming} green pays.
+
+The distinction matters for a simple reason: if high ESG scores are already embedded in prices through investor demand, there is no return premium to harvesting a static level. The premium, if it exists, must be located in the \emph{transition} --- in the information conveyed by an ESG improvement and the market reaction to it. This paper shifts the empirical lens from ESG state to ESG change, and finds a consistent, statistically robust set of pricing effects that static ESG level cannot generate.
+
+The Capital Asset Pricing Model provides the pricing framework. Standard CAPM and its Fama-French extensions treat systematic risk as fixed, yet a firm undergoing an ESG transition is not a static entity: it is restructuring operations, reallocating capital expenditure, and attracting or shedding a new investor base. All of these forces alter the firm's sensitivity to market-wide shocks. The CAPM, as standardly estimated, has no mechanism for capturing this. This thesis builds one.
+
+\section{What This Thesis Does}
+
+Using a time varying panel of 479 S\&P 500 firms over February 2015 to December 2024 (56,656 firm-month observations), this thesis augments the CAPM with time-varying ESG change ($\Delta$ESG) and tests four empirically distinct claims.
+
+First, ESG level carries no reliable cross-sectional risk premium. The Fama-MacBeth test yields $t = 1.086$ ($p = 0.280$): static ESG is already priced in and generates no exploitable spread. By contrast, within-firm ESG level variation is significantly priced ($t = 3.691$, $p = 0.0002$) in the fixed-effects panel, confirming that it is the \emph{movement} relative to a firm's own baseline that matters.
+
+Second, ESG improvements are priced contemporaneously. Model M6 shows that month-over-month ESG change earns a significant positive return premium ($\hat{\beta} = 0.0203$, $t = 2.394$, $p = 0.017$), reflecting rapid market incorporation of the information content in rating revisions.
+
+Third, lagged ESG improvements predict next-month returns even after Fama-French five-factor controls ($\hat{\gamma} = 0.0243$, $t = 3.14$, $p = 0.0017$). This ESG momentum channel is consistent with gradual institutional portfolio rebalancing and establishes $\Delta$ESG as a viable predictive factor.
+
+Fourth --- and most originally --- ESG improvements \emph{amplify} market beta rather than dampening it ($\hat{\beta}_{int} = 0.5304$, $t = 2.814$, $p = 0.005$). This ``Beta Amplification Paradox'' directly contradicts the conventional narrative that sustainable firms are lower-risk. Firms in active ESG transition attract correlated institutional flows and face heightened operational uncertainty, both of which increase their co-movement with the market during the transition period.
+
+\section{Contributions}
+
+This thesis makes three contributions. First, it reframes the ESG-return debate around dynamics rather than levels, resolving the otherwise contradictory evidence on static ESG pricing. Second, it documents the Beta Amplification Paradox --- the empirical finding that ESG improvements temporarily increase systematic risk --- which has direct implications for how ESG is used in risk models and portfolio construction. Third, it demonstrates that individual E, S, and G pillars carry no return signal when considered in isolation: it is the aggregate composite change that the market prices, consistent with ESG as a holistic ``monolith'' rating rather than a sum of independent characteristics.
+
+\section{Outline}
+
+Chapter~\ref{chap:literature} reviews the literature on CAPM extensions, ESG pricing, and ESG dynamics. Chapter~\ref{chap:framework} presents the model framework, data construction, and methodology --- including the diagnostic pipeline that justifies fixed effects over random effects and clustered standard errors. Chapter~\ref{chap:results} reports the four core results. Chapter~\ref{chap:discussion} discusses mechanisms, limitations, and conclusions. Appendices contain full regression tables, portfolio sorts, and the Kalman-OU technical derivations.

@@ -1,0 +1,21 @@
+\clearpage
+\appendix
+\section*{Appendix A: Code, Data, and Reproducibility}
+
+To ensure full transparency and reproducibility of the empirical analysis presented in this thesis, all code, processed datasets, and supporting materials have been made publicly available in an online repository:
+
+\begin{center}
+\texttt{https://github.com/codegeek03/Does-Being-Green-Really-Pay-}
+\end{center}
+
+The repository is structured to reflect the complete research pipeline, from raw data ingestion to final result generation. The \texttt{src/analysis/} directory contains the core Python scripts used for data processing, model estimation, and visualization. In particular, the main script (\texttt{esg\_capm\_analysis.py}) implements the full empirical workflow, including panel construction, regression estimation, and hypothesis testing. Supplementary scripts generate publication-quality figures and additional robustness visualizations.
+
+The \texttt{data/} directory is divided into raw and processed components. Raw data files include ESG scores, return series, and factor datasets obtained from external sources. These are transformed into a structured panel dataset stored in \texttt{data/processed/}, which serves as the primary input for all empirical models. Intermediate cleaning, normalization, and feature engineering steps are fully documented within the codebase.
+
+All tables and figures reported in the thesis are reproducible through the scripts provided and are stored in the \texttt{results/} directory. This includes regression outputs, hypothesis test summaries, and graphical diagnostics. The repository also contains the complete \LaTeX{} source files for the thesis document in the \texttt{thesis/} folder, allowing for full replication of the written report.
+
+A key component of the analysis is the construction of a high-frequency ESG panel using a stochastic interpolation framework. This is implemented in the script \texttt{stochastic\_esg\_simulator.py}, which models within-year ESG dynamics while preserving empirical properties such as persistence, sectoral co-movement, and event-driven shocks. This approach addresses the low-frequency nature of ESG disclosures and enables the estimation of time-varying effects.
+
+To execute the analysis, users can run the main scripts from the repository root after installing the required Python dependencies. While the original development environment is not bundled, the code is modular and can be executed in any standard Python environment with commonly used data science libraries.
+
+Overall, the repository is designed to provide a fully reproducible and extensible framework for studying ESG dynamics within asset pricing models. Researchers can adapt the pipeline to alternative datasets, extend the model specifications, or integrate additional factors for further analysis.

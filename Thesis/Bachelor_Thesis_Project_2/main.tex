@@ -1,0 +1,224 @@
+\documentclass[a4paper, oneside]{Thesis}
+
+\usepackage{wrapfig}
+\usepackage{lscape} % FIXED
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{stackengine}
+\usepackage{url}
+\usepackage{numprint}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{subcaption} % FIXED
+\usepackage{setspace}   % FIXED
+
+\usepackage{natbib}
+\usepackage{hyperref}   % MOVED LAST
+
+\nprounddigits{3}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\setstackEOL{\#}
+\setstackgap{L}{10pt}
+\usepackage{eso-pic}
+
+\newcommand{\AddCertSignatureLine}{%
+  \AddToShipoutPictureFG*{%
+    \AtTextUpperLeft{%
+      \raisebox{-0.36\textheight}[0pt][0pt]{%
+        \makebox[\textwidth]{%
+          \begin{minipage}{\textwidth}
+            \centering
+            \rule{7cm}{0.4pt}\\[-0.15em]
+            \small Supervisor's Signature
+          \end{minipage}
+        }%
+      }%
+    }%
+  }%
+}
+
+\graphicspath{{Pictures/}}
+\usepackage{natbib}
+
+\hypersetup{urlcolor=black, colorlinks=false}
+
+%------------------------------------------------------------------------
+%  THESIS METADATA  — update these fields as required
+%------------------------------------------------------------------------
+\thesistitle{Pricing ESG Changes in the CAPM: An Empirical Analysis of Return Predictability and Beta Amplification}
+\supervisor{Professor Ajay Kumar Mishra}
+\degree{B.Tech(Hons.) and M.Tech(Dual Degree)}
+\degreemajor{Chemical Engineering and Financial Engineering}
+\authors{Shamik Bhattacharjee}
+\rollno{22CH3FP11}
+\university{Indian Institute of Technology Kharagpur}
+\newcommand{\primarydept}{Department of Chemical Engineering}
+\newcommand{\secondarydept}{Vinod Gupta School of Management}
+\department{\primarydept}
+\unisite{http://www.iitkgp.ac.in}
+\depsite{http://www.iitkgp.ac.in}
+\placeshrt{Kharagpur}
+\placelng{Kharagpur - 721302, India}
+\datesub{}
+\datesig{}
+\semsub{Spring Semester, 2025-26}
+\coursecd{Bachelor Thesis Project}
+
+\title{\ttitle}
+
+\begin{document}
+
+\frontmatter
+\setstretch{1.6}
+
+\fancyhead{}
+\rhead{\thepage}
+\lhead{}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------
+%  TITLE PAGE
+%----------------------------------------------------
+\maketitle
+\clearpage
+
+%----------------------------------------------------
+%  DECLARATION
+%----------------------------------------------------
+\Declaration
+
+%----------------------------------------------------
+%  CERTIFICATE
+%----------------------------------------------------
+\addtotoc{Certificate}
+\department{\secondarydept}
+\certificate{\addtocontents{toc}{}}
+\department{\primarydept}
+\clearpage
+
+\setstretch{1.3}
+
+%----------------------------------------------------
+%  ACKNOWLEDGEMENTS
+%----------------------------------------------------
+\acknowledgements{
+
+I would like to express my deepest gratitude to my supervisor,
+Prof.\ Dr.\ Ajay Kumar Mishra for his guidance, encouragement,
+and steady intellectual support throughout this project. His ability
+to connect methodological rigour with practical financial insight
+shaped this thesis in ways I could not have managed independently.
+
+
+Finally, I thank my parents for their unwavering support, and my
+friends for their encouragement at every stage of this project.
+
+}
+\clearpage
+
+%----------------------------------------------------
+%  ABSTRACT
+%----------------------------------------------------
+\addtotoc{Abstract}
+\abstract{\addtocontents{toc}{}
+This thesis investigates whether changes in environmental, social, and governance (ESG) characteristics, rather than their static levels, are priced in equity markets. Using a panel of S\&P 500 firms over the period 2015–2024, the study constructs a time-varying ESG measure to capture within-firm dynamics. The analysis is conducted within a CAPM-based framework augmented with ESG variables to examine both return predictability and systematic risk.
+
+The results show that ESG levels do not command a robust cross-sectional premium, indicating that static sustainability characteristics are largely incorporated into market prices. In contrast, improvements in ESG are associated with positive contemporaneous returns and exhibit predictive power for future returns, even after controlling for standard risk factors. This provides evidence of an ESG momentum effect consistent with gradual information diffusion and institutional rebalancing.
+
+A key finding is that ESG improvements increase market beta, revealing a \textit{Beta Amplification Paradox} in which firms undergoing sustainability transitions experience higher exposure to systematic risk. Additional analysis shows that individual ESG components are not priced in isolation, while sector-level results indicate that effects are concentrated in industries where ESG considerations are economically material. Overall, the findings highlight ESG as a dynamic and state-dependent pricing factor with implications for asset pricing and portfolio construction.
+
+
+
+}
+\clearpage
+
+%----------------------------------------------------
+%  TABLE OF CONTENTS
+%----------------------------------------------------
+\pagestyle{fancy}
+
+\tableofcontents
+\clearpage
+
+%\setstretch{1.5}
+
+%----------------------------------------------------
+%  LIST OF FIGURES
+%----------------------------------------------------
+%\lhead{\emph{List of Figures}}
+%\listoffigures
+%\clearpage
+
+%----------------------------------------------------
+%  LIST OF TABLES
+%----------------------------------------------------
+%\lhead{\emph{List of Tables}}
+%\listoftables
+%\clearpage
+
+%----------------------------------------------------
+%  ABBREVIATIONS
+%----------------------------------------------------
+%\lhead{\emph{Abbreviations}}
+\listofsymbols{ll}{
+  \textbf{CAPM}  & Capital Asset Pricing Model \\
+  \textbf{CMA}   & Conservative Minus Aggressive (Fama-French factor) \\
+  \textbf{ESG}   & Environmental, Social, and Governance \\
+  \textbf{FE}    & Fixed Effects \\
+  \textbf{FF5}   & Fama-French Five-Factor Model \\
+  \textbf{FM}    & Fama-MacBeth \\
+  \textbf{GICS}  & Global Industry Classification Standard \\
+  \textbf{HC3}   & Heteroskedasticity-Consistent (Davidson-MacKinnon) \\
+  \textbf{HML}   & High Minus Low (book-to-market factor) \\
+  \textbf{HML$_{\text{ESG}}$} & High-Minus-Low ESG portfolio \\
+  \textbf{NW}    & Newey-West \\
+  \textbf{OLS}   & Ordinary Least Squares \\
+  \textbf{OU}    & Ornstein-Uhlenbeck \\
+  \textbf{RMW}   & Robust Minus Weak (profitability factor) \\
+  \textbf{SASB}  & Sustainability Accounting Standards Board \\
+  \textbf{SMB}   & Small Minus Big (size factor) \\
+}
+
+%========================================================
+%  MAIN MATTER
+%========================================================
+\mainmatter
+\pagestyle{fancy}
+
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter2}
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4}
+\input{Chapters/Chapter5}
+%\input{Chapters/Appendix}
+
+%----------------------------------------------------
+%  BIBLIOGRAPHY
+%----------------------------------------------------
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliography}
+%\lhead{\emph{Bibliography}}
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{Bibliography}
+
+\end{document}

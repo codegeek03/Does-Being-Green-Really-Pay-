@@ -1,0 +1,47 @@
+%========================================================
+% CHAPTER 5: DISCUSSION, LIMITATIONS, AND CONCLUSION
+%========================================================
+\chapter{Discussion, Limitations, and Conclusion}
+\label{chap:discussion}
+
+%----------------------------------------------------
+\section{Discussion}
+%----------------------------------------------------
+
+The four results of Chapter~\ref{chap:results} cohere around a single interpretive frame: the market prices the \emph{transition process} of ESG improvement, not the \emph{state} of ESG attainment. This section elaborates on the three mechanisms that connect results to theory and addresses the paradox that is the thesis's most original contribution.
+
+\textbf{Information flow and the transition narrative.} The contemporaneous pricing of $\Delta$ESG (H3: $t=2.394$, $p=0.017$) confirms that ESG rating revisions carry news. When Sustainalytics updates a firm's score, the revision aggregates information about recent operational changes, controversy resolutions, or governance improvements. This information is not perfectly anticipated by the market: the within-firm FE result (H1) shows that firms command a premium when they are above their own ESG baseline, consistent with the market updating its assessment of the firm's risk profile in real time as the score changes.
+
+The shift from ``Does being green pay?'' to ``Does becoming green pay?'' resolves the apparent contradiction between H1 and H2. If high ESG scores are already reflected in equilibrium prices through sustained investor demand --- as the insignificant Fama-MacBeth result (H2: $p=0.280$) implies --- then there is no level premium to harvest. The exploitable signal is in the direction of ESG movement: firms becoming greener earn positive returns because the market updates their valuation as new information arrives, not because high-ESG firms as a class are systematically underpriced.
+
+\textbf{Institutional rebalancing and the momentum channel.} The ESG momentum finding (H4: $t=3.14$, $p=0.002$) confirms that ESG information is not fully absorbed instantaneously. ESG-screened institutional mandates --- pension funds, ESG ETFs, and SRI funds --- respond to score upgrades by incrementally increasing their holdings over multiple months, constrained by position size limits, rebalancing cycles, and liquidity constraints. This creates a persistent demand shock that generates return predictability beyond the contemporaneous month. The result establishes $\Delta$ESG as a viable candidate for a factor-based investment strategy, complementing but distinct from classical price momentum \citep{jegadeesh1993returns}.
+
+\textbf{The Beta Amplification Paradox and transition risk.} The finding that ESG improvements amplify market beta (H5: $\hat{\beta}_3=0.5304$, $t=2.814$, $p=0.005$) is the thesis's most original and counterintuitive contribution. The conventional ESG-risk narrative holds that better-managed, more sustainable firms are less exposed to systematic shocks. Our evidence shows the opposite holds \emph{during the transition period}.
+
+Two mechanisms are at work simultaneously. First, ESG improvement is not free: it requires capital expenditure on sustainability infrastructure, operational restructuring, and potentially painful supply-chain adjustments. A firm in the middle of an ESG transition is more exposed to macroeconomic conditions than a firm that has completed one. Second, an ESG upgrade attracts correlated inflows from ESG-screened mandates: multiple institutional investors simultaneously accumulating the same stock increases its co-movement with the aggregate market through a common institutional demand factor. Both forces increase beta during the transition phase.
+
+The sector-level evidence reinforces this interpretation. Materials, Industrials, Consumer Discretionary, and Financials --- the sectors where ESG improvements are SASB-material and involve genuine operational overhaul --- show significant $\Delta$ESG return effects. Information Technology ($p=0.670$), where ESG is frequently viewed as immaterial CSR, shows no effect. The market prices ESG transitions where they are real and ignores them where they are cosmetic.
+
+%----------------------------------------------------
+\section{Limitations}
+%----------------------------------------------------
+
+\textbf{Synthetic ESG panel.} The monthly ESG series is constructed via stochastic interpolation rather than directly observed monthly scores. Although the Ornstein-Uhlenbeck calibration preserves annual anchors and replicates empirical ESG autocorrelation, some within-year variation remains synthetic. The $\Delta$ESG coefficients are therefore likely a lower bound on the true ESG-change return relationship, and the reported effects may be attenuated by interpolation smoothness.
+
+\textbf{Large-cap bias.} The sample is restricted to S\&P 500 firms. These are the most liquid, most analyst-covered, and most institutionally held equities in the U.S., meaning ESG information is incorporated relatively rapidly and institutional ESG flows represent a large fraction of trading volume. The ESG momentum effect may be substantially larger in the small-cap universe where information diffusion is slower and market microstructure is less efficient.
+
+\textbf{U.S.-only data.} The analysis covers only U.S. equities. International markets differ substantially in ESG disclosure requirements, regulatory environments, and institutional investor ESG mandate penetration. The Beta Amplification Paradox and ESG momentum channel may operate with different magnitudes or signs in European markets, where mandatory ESG reporting under the SFDR has altered both the information environment and the institutional investor response function.
+
+\textbf{Short effective horizon.} The ten-year sample (2015--2024) encompasses the pre-ESG-mainstream period and the surge in institutional ESG adoption, as well as the COVID-19 shock. The structural shift in institutional ESG mandates during this window makes it difficult to separate the ESG momentum premium from a secular shift in ESG demand. Longer samples with richer variation in ESG investor composition would strengthen causal identification.
+
+%----------------------------------------------------
+\section{Conclusion}
+%----------------------------------------------------
+
+This thesis reoriented the ESG-return question from state to transition. Rather than asking whether high-ESG firms earn higher returns --- a question that presupposes a static greenium that the Fama-MacBeth evidence consistently fails to confirm ($t=1.086$, $p=0.280$) --- it asked whether firms \emph{becoming} more sustainable earn higher returns. The answer across 56,656 firm-months of S\&P 500 data is unambiguous: yes, and through multiple reinforcing channels.
+
+ESG improvements are priced contemporaneously ($\hat{\beta}=0.0203$, $t=2.394$, $p=0.017$), confirming rapid information incorporation. Lagged ESG improvements predict next-month returns after five-factor controls ($\hat{\gamma}=0.0243$, $t=3.14$, $p=0.002$), establishing an ESG momentum channel driven by gradual institutional rebalancing. And ESG improvements amplify rather than dampen market beta ($\hat{\beta}_{int}=0.5304$, $t=2.814$, $p=0.005$), revealing the Beta Amplification Paradox: firms in ESG transition are \emph{more} exposed to systematic risk, not less, during the transition period.
+
+None of these effects can be detected using individual E, S, or G pillar changes. It is the holistic composite rating that the market treats as a credible signal. And the signal is concentrated in sectors where ESG is SASB-material --- Materials, Industrials, Consumer Discretionary, Financials --- and invisible in sectors like Information Technology where ESG changes are perceived as immaterial.
+
+The implications run in two directions. For investors, an ESG momentum strategy --- tilting toward firms with recent aggregate ESG improvements in SASB-material sectors --- offers incremental return predictability beyond standard factor models, at the cost of temporarily elevated systematic risk during the transition period. For researchers, treating ESG as a static cross-sectional characteristic will continue to produce the mixed, inconclusive evidence that has frustrated the field. The dynamic dimension of ESG --- its changes, not its levels --- is where the asset pricing signal lives.

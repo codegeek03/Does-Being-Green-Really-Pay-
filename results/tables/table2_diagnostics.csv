@@ -1,0 +1,5 @@
+Test,Statistic,p-value,Decision
+D1 Hausman (Mundlak),12.044,0.0,Reject H0 → Use FE ✓
+D2 Pesaran CD,129.867,0.0,Reject H0 → Clustered SEs justified ✓
+D3 Wooldridge AR(1),87.194,0.0,"Reject H0 → Serial correlation present, NW SEs applied ✓"
+D4 VIF (M6 regressors),1.075,—,VIFs acceptable ✓ — centring ΔESG resolves collinearity

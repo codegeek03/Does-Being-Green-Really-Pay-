@@ -1,0 +1,7 @@
+ID,Q,Model,Statistic,Coeff,Raw_p,Bonf_p,BH_p,Stars,Decision
+H1,Q1 — ESG Level (within-FE),M2,t = 3.691,0.014,0.0002,0.0012,0.0083,***,Reject H0 ***
+H2,Q1 — ESG Level (Fama-MacBeth),FM,t = 1.086,0.00446,0.2797,1.0,0.05,,Fail to reject
+H3,Q2 — ΔESG → Contemporaneous Returns,M6,t = 2.394,0.02033,0.0167,0.1002,0.0333,**,Reject H0 **
+H4,Q3 — ESG Momentum (FF5-controlled),P3,t = 3.140,0.0243,0.0017,0.0102,0.0167,***,Reject H0 ***
+H5,Q4 — ΔESG Modulates Market Beta,M6,t = 2.814,0.5304,0.0049,0.0294,0.025,***,Reject H0 ***
+H6,Q4b — ESG Level Modulates Market Beta,M2C,t = 1.442,0.10626,0.1492,0.8952,0.0417,,Fail to reject

@@ -1,0 +1,4 @@
+Model,Controls,γ_ΔESG,SE,t,p,Stars,R²,N
+P1: ΔESG_lag (no risk controls),None,0.079902,0.009684,8.251,0.0,***,0.0166,55219
+P2: ΔESG_lag + Mkt-RF,Mkt-RF,0.027265,0.007948,3.43,0.0006,***,0.3005,55219
+P3: ΔESG_lag + FF5 (main),FF5,0.024296,0.007737,3.14,0.0017,***,0.3056,55219

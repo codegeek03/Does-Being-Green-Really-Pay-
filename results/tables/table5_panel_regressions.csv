@@ -1,0 +1,18 @@
+,M1: Baseline CAPM,M2: +ESG Level,M2C: +ESG Level+Interaction,M6: +ΔESG+Interaction
+mkt_rf,0.9765***,0.9771***,0.9770***,0.9783***
+  (mkt_rf)_SE,(0.0151),(0.0151),(0.0151),(0.0151)
+esg_norm,,0.0140***,,
+  (esg_norm)_SE,,(0.0038),,
+esg_norm_c,,,0.0129***,
+  (esg_norm_c)_SE,,,(0.0039),
+esg_norm_c × mkt_rf,,,0.1063,
+  (esg_norm_c × mkt_rf)_SE,,,(0.0737),
+Δesg_c,,,,0.0203**
+  (Δesg_c)_SE,,,,(0.0085)
+Δesg_c × mkt_rf,,,,0.5304***
+  (Δesg_c × mkt_rf)_SE,,,,(0.1885)
+Entity FE,Yes,Yes,Yes,Yes
+Year FE,Yes,Yes,Yes,Yes
+N obs,"56,656","56,656","56,656","55,715"
+R²,0.2979,0.2980,0.2981,0.2991
+Adj. R²,0.2917,0.2919,0.2920,0.2928
